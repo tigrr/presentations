@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>APIs | by Tigran Sargsyan</title>
+
+	<meta name="description" content="A very generic talk slide show about APIs" />
+	<meta name="author" content="Tigran Sargsyan" />
+
+	<link rel="stylesheet" href="../assets/impress.js/extras/highlight/styles/github.css">
+
+	<!-- This file contains common styles for example presentations. -->
+	<link href="../assets/impress.js/css/impress-common.css" rel="stylesheet" />
+	<!--
+		This file contains styles specific for this example presentation.
+	-->
+	<link href="../assets/css/style.css" rel="stylesheet" />
+	<link href="../assets/css/presentation.css" rel="stylesheet" />
+</head>
+<body class="impress-not-supported">
+
+<!--
+	This fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+	<p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+	<p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+	<div class="step slide title" data-x="-2200" data-y="-3000">
+		<h1>APIs<br>Three most meaningless letters?</h1>
+		<h2>Tigran Sargsyan</h2>
+		<h3>2022</h3>
+
+		<div class="notes">
+		Any element with the class="notes" will not be displayed. This can
+		be used for speaker notes. In fact, the impressConsole plugin will
+		show it in the speaker console!
+		</div>
+	</div>
+
+	<div id="toc" class="step slide" data-rel-x="2200" data-rel-y="0">
+		<h1>Table of Contents</h1>
+		<ul>
+			<li><a href="#step-1">The title slide</a></li>
+			<li><a href="#step-2">Table of Contents</a></li>
+			<li><a href="#api">API</a></li>
+			<li><a href="#application">Application</a></li>
+			<li><a href="#programming">Programming</a></li>
+			<li><a href="#interface">Interface</a></li>
+		</ul>
+	</div>
+
+	<div id="api" class="step slide center">
+		<div class="big">
+			<b class="red">A</b>pplication<br>
+			<b class="blue">P</b>rogramming<br>
+			<b class="orange">I</b>nterface
+		</div>
+	</div>
+
+	<div id="application" class="step slide">
+		<h1><b class="red">A</b> for Application <small>(app for short)</small></h1>
+		<p><img src="images/apps.webp" alt=""></p>
+	</div>
+
+	<div id="application-types" class="step slide" data-rel-position="relative" data-rel-x="2200" data-rel-y="600" data-rel-rotate-z="30">
+		<h1>Types of Applications</h1>
+		<ul>
+			<li>Desktop: Windows, Mac, Linux</li>
+			<li>Mobile: Android, iOS, <s>Firefox OS</s></li>
+			<li>Web: browser or server</li>
+			<li>Smart appliances</li>
+			<li>Anything you can dream of</li>
+		</ul>
+	</div>
+
+	<div id="programming" class="step slide" data-rel-x="0" data-rel-y="1200" data-rel-rotate-z="0">
+		<h1><b class="red">P</b> for Programming</h1>
+		<p><img src="images/code.png" alt=""></p>
+	</div>
+
+	<div class="step zoom" data-rel-reset data-rel-x="0" data-rel-y="65" data-scale="0.5"></div>
+
+	<div class="step slide" data-rel-position="relative" data-rel-x="2200" data-rel-y="600" data-rel-rotate-z="30">
+		<h1>Programming language</h1>
+		<pre><code>
+			var firstNumber = 3
+			var secondNumber = 2
+			var sum = firstNumber + secondNumber
+		</code></pre>
+		<p>A programming language has:</p>
+		<ul>
+			<li class="substep">data types: text, numbers, booleans...</li>
+			<li class="substep">a way to define variables</li>
+			<li class="substep">operators: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> ...</li>
+		</ul>
+	</div>
+
+	<div id="interface" class="step slide" data-rel-x="0" data-rel-y="1200" data-rel-rotate-z="0">
+		<h1><b class="red">I</b> for Interface</h1>
+		<p><img style="width: 1200px" src="images/interface.png" alt=""></p>
+	</div>
+
+	<div class="step slide" data-rel-x="0" data-rel-y="1200" data-rel-rotate-z="0">
+		<h1>And once again API</h1>
+		<p><img style="width: 600px" src="images/API.png" alt=""></p>
+	</div>
+
+	<div class="step slide" data-rel-x="2200" data-rel-y="600" data-rel-rotate-z="30">
+		<h1>Examples</h1>
+		<ul>
+			<li class="substep"><a href="https://dog.ceo/dog-api/" target="_blank" rel="noopener">Dogs API</a></li>
+		</ul>
+	</div>
+
+	<div class="step slide" data-rel-x="0" data-rel-y="1200" data-rel-rotate-z="0">
+		<h1>The End</h1>
+		<p>Phew, this was a quick one 😅</p>
+	</div>
+
+	<div id="overview" class="step" data-x="4500" data-y="1500" data-scale="10" style="pointer-events: none;"></div>
+</div>
+
+<!--
+	Add navigation-ui controls: back, forward and a select list.
+	Add a progress indicator bar (current step / all steps)
+	Add the help popup plugin
+-->
+<div id="impress-toolbar"></div>
+
+<div class="impress-progressbar"><div></div></div>
+<div class="impress-progress"></div>
+
+<div id="impress-help"></div>
+
+<!-- Extra modules
+	 Load highlight.js, mermaid.js, markdown.js and MathJax.js from extras.
+	 If you're curious about details, these are initialized in src/plugins/extras/extras.js -->
+<script type="text/javascript" src="../assets/impress.js/extras/highlight/highlight.pack.js"></script>
+<!--
+	To make all described above really work, you need to include impress.js in the page.
+	You also need to call a `impress().init()` function to initialize impress.js presentation.
+	And you should do it in the end of your document.
+-->
+<script type="text/javascript" src="../assets/impress.js/js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>APIs | by Tigran Sargsyan</title>
+
+	<meta name="description" content="A slide show on HTTP (HTTPS), general information on how browser-server communication works" />
+	<meta name="author" content="Tigran Sargsyan" />
+
+	<link rel="stylesheet" href="../assets/impress.js/extras/highlight/styles/github.css">
+
+	<!-- This file contains common styles for example presentations. -->
+	<link href="../assets/impress.js/css/impress-common.css" rel="stylesheet" />
+	<!--
+		This file contains styles specific for this example presentation.
+	-->
+	<link href="../assets/css/style.css" rel="stylesheet" />
+	<link href="../assets/css/presentation.css" rel="stylesheet" />
+</head>
+<body class="impress-not-supported">
+
+<!--
+	This fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+	<p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+	<p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+	<div class="step slide title" data-x="-2200" data-y="-3000">
+		<h1>HTTP<br>How the web works</h1>
+		<h2>Tigran Sargsyan</h2>
+		<h3>2022</h3>
+	</div>
+
+	<div class="step slide" data-rel-x="2200" data-rel-y="0">
+		<h1>Hypertext Transfer Protocol</h1>
+		<p>Created by Tim Berners-Lee at CERN in 1989</p>
+		<p><img src="images/tim.jfif" alt=""></p>
+	</div>
+
+	<div class="step slide">
+		<h1>Versions</h1>
+		<ul>
+			<li>HTTP/1, 1996</li>
+			<li>HTTP/2, 2015</li>
+			<li>HTTP/3, 2022</li>
+		</ul>
+	</div>
+
+	<div class="step slide">
+		<p>A protocol is a standard procedure for defining and regulating communication.</p>
+		<p><img src="images/protocol.png" alt="" style="width: 1200px"></p>
+	</div>
+
+	<div class="step slide">
+		<p>HTTP functions as a request–response protocol in the client–server model</p>
+		<p><img src="images/request-response.png" alt=""></p>
+	</div>
+
+	<div class="step slide">
+		<p>Transfers all sorts of data between server and client</p>
+		<ul>
+			<li>Plain text</li>
+			<li>HTML, CSS, JavaScript files</li>
+			<li>Images</li>
+			<li>Videos</li>
+			<li>Audio</li>
+		</ul>
+	</div>
+
+	<div class="step slide">
+		<h1>Terminology</h1>
+		<ul>
+			<li><strong>IP Address</strong>: An Internet Protocol address is a numerical label assigned to each device (e. g. computer, smartphone, printer)</li>
+			<li><strong>TCP</strong>: Transmission Control Protocol is one of the two original core protocols of the Internet Protocol Suite (IP), and is so common that the entire suite is often called TCP/IP.</li>
+			<li><strong>Port Number</strong>: A port number is a 16 bit number which when associated with IP address, completes the destination address for a communications session.</li>
+		</ul>
+	</div>
+
+	<div class="step slide">
+		<h1>DNS: Domain Name System</h1>
+		<p><img src="images/dns.webp" alt=""></p>
+	</div>
+
+	<div class="step slide">
+		<h1>HTTP Request message</h1>
+		<p>The first line of an HTTP request message is called the request line; the subsequent lines are called header lines. The request line has three fields: the method field, the URL field, and the HTTP version field.</p>
+	</div>
+
+	<div class="step slide">
+		<h1>Methods</h1>
+		<ul>
+			<li><strong>GET</strong>: Retrieve document identified in URL</li>
+			<li><strong>POST</strong>: Give information to server</li>
+			<li><strong>PUT</strong>: Store document under specified URL</li>
+			<li><strong>DELETE</strong>: Delete specified URL</li>
+			<li>etc.</li>
+		</ul>
+	</div>
+
+	<div class="step slide">
+		<h1>HTTP Response Message</h1>
+		<p>It has three sections: an initial status line, header lines, and then the entity body. The entity body contains the requested object itself.</p>
+	</div>
+
+	<div class="step slide">
+		<p><strong>Some common status codes and associated phrases</strong></p>
+		<ul>
+			<li><strong>200 OK</strong>: Standard response for successful HTTP requests.</li>
+			<li><strong>301 Moved Permanently</strong>: This and all future requests should be directed to the given URI.</li>
+			<li><strong>400 Bad Request</strong>: The server cannot or will not process the request due to an apparent client error (e.g., malformed request syntax, size too large, invalid request message framing, or deceptive request routing).</li>
+			<li>
+				<strong>403 Forbidden</strong>:
+				The request contained valid data and was understood by the server, but the server is refusing action.
+			</li>
+			<li><strong>404 Not Found</strong>: The requested resource could not be found but may be available in the future. Subsequent requests by the client are permissible.</li>
+		</ul>
+	</div>
+
+	<div class="step slide">
+		<h1>Cookies</h1>
+		<p><img src="images/cookie.jfif" alt=""></p>
+	</div>
+
+	<div class="step slide">
+		<h1>Caching</h1>
+		<p><img src="images/cache.png" alt=""></p>
+	</div>
+
+	<div class="step slide">
+		<h1>The End</h1>
+		<p>This one wasn't so easy 🥵</p>
+	</div>
+
+	<div id="overview" class="step" data-x="4500" data-y="1500" data-scale="10" style="pointer-events: none;"></div>
+
+</div>
+
+<!--
+	Add navigation-ui controls: back, forward and a select list.
+	Add a progress indicator bar (current step / all steps)
+	Add the help popup plugin
+-->
+<div id="impress-toolbar"></div>
+
+<div class="impress-progressbar"><div></div></div>
+<div class="impress-progress"></div>
+
+<div id="impress-help"></div>
+
+<!-- Extra modules
+	 Load highlight.js, mermaid.js, markdown.js and MathJax.js from extras.
+	 If you're curious about details, these are initialized in src/plugins/extras/extras.js -->
+<script type="text/javascript" src="../assets/impress.js/extras/highlight/highlight.pack.js"></script>
+<!--
+	To make all described above really work, you need to include impress.js in the page.
+	You also need to call a `impress().init()` function to initialize impress.js presentation.
+	And you should do it in the end of your document.
+-->
+<script type="text/javascript" src="../assets/impress.js/js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
