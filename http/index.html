@@ -86,12 +86,29 @@
 	</div>
 
 	<div class="step slide">
-		<h1>HTTP Request message</h1>
-		<p>The first line of an HTTP request message is called the request line; the subsequent lines are called header lines. The request line has three fields: the method field, the URL field, and the HTTP version field.</p>
+		<h1>HTTP requests / responses structure</h1>
+		<ol>
+			<li>A <em>start-line</em> describing the requests to be implemented, or its status of whether successful or a failure. This start-line is always a single line.</li>
+			<li>An optional set of HTTP <em>headers</em> specifying the request, or describing the body included in the message.</li>
+			<li>A blank line indicating all meta-information for the request has been sent.</li>
+			<li>An optional <em>body</em> containing data associated with the request (like content of an HTML form), or the document associated with a response.</li>
+		</ol>
 	</div>
 
 	<div class="step slide">
-		<h1>Methods</h1>
+		<h1>HTTP Request message</h1>
+		<div class="substep">
+			<h2>The start line has three fields:</h2>
+			<ul>
+				<li>the method, e. g. <code>GET</code>, <code>POST</code>, etc.</li>
+				<li>the URL, e. g. <code>/post?id=42</code></li>
+				<li>and the HTTP version, e. g. <code>HTTP/1.1</code>.</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="step slide">
+		<h2>Methods</h2>
 		<ul>
 			<li><strong>GET</strong>: Retrieve document identified in URL</li>
 			<li><strong>POST</strong>: Give information to server</li>
@@ -102,8 +119,36 @@
 	</div>
 
 	<div class="step slide">
+		<h2>
+			URL - Universal Resource Location<br>
+			(or URI - Universal Resource Identifier)
+		</h2>
+		<p><img src="images/url.png" alt="" style="width: 1500px"></p>
+	</div>
+
+	<div class="step slide">
+		<h2>Examples of request headers</h2>
+		<ul>
+			<li><code>Accept-Encoding: gzip, deflate, br</code></li>
+			<li><code>Accept-Language: en-US,en;q=0.9,ru-RU;q=0.8,ru;q=0.7,de;q=0.6,hy;q=0.5</code></li>
+			<li><code>Referer: https://example.com/another-page</code></li>
+			<li><code>User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36</code></li>
+		</ul>
+	</div>
+
+	<div class="step slide">
 		<h1>HTTP Response Message</h1>
-		<p>It has three sections: an initial status line, header lines, and then the entity body. The entity body contains the requested object itself.</p>
+		<p>It has three sections: an initial <em>status line</em>, <em>header</em> lines, and then the entity <em>body</em>. The entity body contains the requested object itself.</p>
+	</div>
+
+	<div class="step slide">
+		<h2>The status line</h2>
+		<ol>
+			<li>The <em>protocol version</em>, e. g. HTTP/1.1.</li>
+			<li>A <em>status code</em>, indicating success or failure of the request. Common status codes are 200, 404, or 302</li>
+			<li>A <em>status text</em>. A brief, purely informational, textual description of the status code to help a human understand the HTTP message.</li>
+		</ol>
+		<p>A typical status line looks like: <code>HTTP/1.1 404 Not Found</code>.</p>
 	</div>
 
 	<div class="step slide">
@@ -117,6 +162,16 @@
 				The request contained valid data and was understood by the server, but the server is refusing action.
 			</li>
 			<li><strong>404 Not Found</strong>: The requested resource could not be found but may be available in the future. Subsequent requests by the client are permissible.</li>
+		</ul>
+	</div>
+
+	<div class="step slide">
+		<h2>Examples of response headers</h2>
+		<ul>
+			<li><code>Content-Encoding: gzip</code></li>
+			<li><code>Last-Modified: Wed, 10 Aug 2022 05:38:31 GMT</code></li>
+			<li><code>Server: Apache</code></li>
+			<li><code>Set-Cookie: csrftoken=....</code></li>
 		</ul>
 	</div>
 
