@@ -29,7 +29,7 @@
 
 <div id="impress">
 
-	<div class="step slide title" data-x="-2200" data-y="-3000">
+	<div id="title" class="step slide title" data-x="-2200" data-y="0">
 		<h1>HTTP<br>How the web works</h1>
 		<h2>Tigran Sargsyan</h2>
 		<h3>2022</h3>
@@ -95,7 +95,7 @@
 		</ol>
 	</div>
 
-	<div class="step slide">
+	<div id="request" class="step slide">
 		<h1>HTTP Request message</h1>
 		<div class="substep">
 			<h2>The start line has three fields:</h2>
@@ -107,7 +107,7 @@
 		</div>
 	</div>
 
-	<div class="step slide">
+	<div class="step slide" data-rel-x="0" data-rel-y="1200">
 		<h2>Methods</h2>
 		<ul>
 			<li><strong>GET</strong>: Retrieve document identified in URL</li>
@@ -136,12 +136,12 @@
 		</ul>
 	</div>
 
-	<div class="step slide">
+	<div id="response" class="step slide" data-rel-to="request" data-rel-x="2200">
 		<h1>HTTP Response Message</h1>
 		<p>It has three sections: an initial <em>status line</em>, <em>header</em> lines, and then the entity <em>body</em>. The entity body contains the requested object itself.</p>
 	</div>
 
-	<div class="step slide">
+	<div class="step slide" data-rel-x="0" data-rel-y="1200">
 		<h2>The status line</h2>
 		<ol>
 			<li>The <em>protocol version</em>, e. g. HTTP/1.1.</li>
@@ -175,7 +175,7 @@
 		</ul>
 	</div>
 
-	<div class="step slide">
+	<div class="step slide" data-rel-to="response" data-rel-x="2200">
 		<h1>Cookies</h1>
 		<p><img src="images/cookie.jfif" alt=""></p>
 	</div>
@@ -190,7 +190,7 @@
 		<p>This one wasn't so easy 🥵</p>
 	</div>
 
-	<div id="overview" class="step" data-x="4500" data-y="1500" data-scale="10" style="pointer-events: none;"></div>
+	<div id="overview" class="step" data-x="12500" data-y="1500" data-scale="16" style="pointer-events: none;"></div>
 
 </div>
 
